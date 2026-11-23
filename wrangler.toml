@@ -1,0 +1,16 @@
+name = "sadbot-dev-redirects"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+routes = [
+  { pattern = "team.sadbot.dev/donate*", zone_name = "sadbot.dev" },
+]
+
+analytics_engine_datasets = [
+  { binding = "VISITS", dataset = "sadbot_redirects" },
+]
+
+[vars]
+# Copy the destination of the current Cloudflare redirect rule here before deleting the rule.
+DONATE_TARGET = "https://leonid.kozar.in/donate"
